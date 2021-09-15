@@ -26,4 +26,16 @@ public class Ejercicios {
         }
         return mcd;
     }
+    //Suma de los elementos de un vector Ejem: vector={2,4,6}
+    //suma=2+{4,6}  suma=4+{6}  suma=6{caso base}
+    public static int sumaVector(int[]vector, int indice){
+        int suma;
+        if(indice==vector.length-1){
+            //caso base
+            suma=vector[indice];
+        }else {
+            suma=vector[indice]+sumaVector(vector, indice+1);
+        }
+        return suma;
+    }
 }
